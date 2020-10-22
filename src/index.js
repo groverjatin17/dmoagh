@@ -1,17 +1,32 @@
-import React, {Suspense} from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './i18n'
+import './i18n';
 import './tailwind/tailwind.css';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+import rootReducer from './reducers/index.js';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+const persistor = persistStore(store);
+
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<div> Loading...</div>}>
-    <App />
-    </Suspense>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Suspense fallback={<div> Loading...</div>}>
+          <App />
+        </Suspense>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
