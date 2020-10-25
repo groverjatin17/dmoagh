@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NestedList() {
+export default function MobileMenuBar() {
   const classes = useStyles();
   const [expandedPanel, setPanelState] = useState(null);
 
@@ -44,11 +44,6 @@ export default function NestedList() {
     <List
       component="nav"
       aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
-        </ListSubheader>
-      }
       className={classes.root}
     >
       {menu &&

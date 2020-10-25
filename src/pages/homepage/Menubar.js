@@ -10,11 +10,11 @@ import Menu from '@material-ui/core/Menu';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import MenuIcon from '../../assets/menu-icon.svg';
-import Accordion from './Accordion';
+import MobileMenuBar from './MobileMenuBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: '#2C5282',
+    backgroundColor: 'white',
     width: '100%',
   },
   menuButton: {
@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     display: 'none',
+    color:"#001653",
+    textTransform: "uppercase",
+    fontSize: "16px",
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
@@ -42,12 +45,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Menubar(props) {
+export default function Menubar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const menu = useSelector((state) => state.homepageReducers.menu);
@@ -63,7 +65,12 @@ export default function Menubar(props) {
   };
 
   const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
+    if (mobileMoreAnchorEl) {
+      handleMobileMenuClose(null)
+    } else {
+      setMobileMoreAnchorEl(event.currentTarget);
+
+    }
   };
 
   const handleClose = () => {
@@ -112,7 +119,7 @@ export default function Menubar(props) {
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = isMobileMenuOpen && <Accordion />;
+  const renderMobileMenu = isMobileMenuOpen && <MobileMenuBar />;
 
   return (
     <>
@@ -122,9 +129,10 @@ export default function Menubar(props) {
             <div className={classes.sectionDesktop}>
               {menu &&
                 menu.map((menuItem) => (
-                  <IconButton
+                  <button
                     key={menuItem.menuItemId}
-                    color="inherit"
+                    type="button"
+                    className="focus:outline-none"
                     onClick={(e) => {
                       dispatch({
                         type: 'CURRENT_SUBMENU',
@@ -136,7 +144,7 @@ export default function Menubar(props) {
                     <Typography className={classes.title} variant="h6" noWrap>
                       {menuItem.menuItemTitle}
                     </Typography>
-                  </IconButton>
+                  </button>
                 ))}
             </div>
             <div className={classes.sectionMobile}>
@@ -155,7 +163,7 @@ export default function Menubar(props) {
         {renderMobileMenu}
         {renderMenu}
       </div>
-      <div className="h-24 bg-gradient-to-r from-red-500" />
+      <div className="h-1 bg-gradient-to-r from-teal-400 to-blue-500" />
     </>
   );
 }

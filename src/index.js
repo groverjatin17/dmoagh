@@ -1,18 +1,18 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+
 import './i18n';
 import './tailwind/tailwind.css';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 import App from './App';
-
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { persistStore } from 'redux-persist';
-import { PersistGate } from 'redux-persist/integration/react';
-import rootReducer from './reducers/index.js';
+import rootReducer from './reducers/index';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
