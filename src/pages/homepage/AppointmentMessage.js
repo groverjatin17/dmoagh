@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
 
 export default function AppointmentMessage() {
-    return (
-        <div className="h-24 bg-blue-800">
-            <p> Do you want to visit our Hospital? Book a free appointment?</p>
-            <button type="button">Book Appointment</button>
-        </div>
-    )
+  return (
+    <div className="lg:h-24 m-5 bg-blue-800 flex flex-col p-5 lg:p-0 lg:flex-row justify-around items-center rounded-lg">
+      <span className="flex text-center items-center text-white font-openSans mb-5 lg:mb-0 text-xl tracking-wider">
+        {' '}
+        Do you want to visit our Hospital? Book a free appointment?
+      </span>
+      <button
+        type="button"
+        className="bg-white text-xl font-semibold text-blue-700 rounded-2xl px-6 py-1 focus:outline-none transform hover:scale-90"
+      >
+        Book Appointment
+      </button>
+    </div>
+  );
 }

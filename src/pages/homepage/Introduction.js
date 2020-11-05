@@ -34,14 +34,14 @@ const cardData = [
 export default function Introduction() {
   return (
     <div>
-      <div className="laptop:relative laptop:h-32">
-        <div className="flex justify-center items-center w-full laptop:absolute laptop:bottom-50px">
-          <div className="laptop:w-3/4 mobile:min-w-full bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900">
-            <div className="grid grid-cols-4 mobile:grid-cols-1">
+      <div className="lg:relative lg:h-32">
+        <div className="flex justify-center items-center w-full lg:absolute lg:bottom-50px">
+          <div className="w-full lg:w-3/4 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900">
+            <div className="grid lg:grid-cols-4 grid-cols-1">
               {cardData.map((item) => (
                 <div
                   key={item.cardId}
-                  className="col-span-1 laptop:border-r-2 p-12"
+                  className="col-span-1 lg:border-r-2 p-12"
                 >
                   <div className="flex flex-col justify-center items-center">
                     <img src={item.cardLogoLink} alt={item.cardLogoAlt} />
@@ -55,11 +55,11 @@ export default function Introduction() {
       </div>
 
       <div className=" flex justify-center items-center mb-20">
-        <div className="laptop:w-3/4">
-          <h1 className="text-4xl text-indigo-900 font-serif mb-4">
+        <div className="lg:w-3/4">
+          <h1 className="text-4xl text-indigo-900 font-serif mb-4 p-6 lg:p-0">
             International Orthopaedic Clinic
           </h1>
-          <p className="font-openSans leading-normal mb-5">
+          <p className="font-openSans leading-normal mb-5 p-6 lg:p-0">
             The International Orthopaedic Clinic was established to provide
             expertise in Orthopaedic surgery to the local and expatriate
             community in Singapore and the Asia-Pacific Region. From his
@@ -69,7 +69,7 @@ export default function Introduction() {
             understanding the patient’s needs, providing realistic expectations
             and practical solutions for their problems.
           </p>
-          <a href="#blah" className="text-lg font-bold">READ MORE ></a>
+          <a href="#blah" className="text-lg font-bold p-6 lg:p-0">READ MORE {'>'}</a>
         </div>
       </div>
     </div>

@@ -52,12 +52,12 @@ const diseasesData = [
 export default function DiseasesSection() {
   return (
     <div>
-      <div className="grid grid-cols-2">
+      <div className="lg:grid lg:grid-cols-2 ">
         <div
-          className="col-span-1 bg- bg-no-repeat relative"
+          className="lg:col-span-1 bg-no-repeat relative"
           style={{ backgroundImage: `url(${Spine}` }}
         >
-          <div className="py-20 pl-48 pr-10 mr-5">
+          <div className="mx-10 py-10 lg:py-20 lg:pl-48 lg:pr-10 lg:mr-5">
             <h1 className="text-4xl text-white font-serif mb-6">Conditions</h1>
             <p className="text-#b2d7ff text-base font-openSans leading-loose mb-6">
               Dr Alan Cheung specialises in all areas of Sports Injuries and
@@ -67,7 +67,7 @@ export default function DiseasesSection() {
             </p>
             <div className="grid grid-cols-2 mb-6">
               <div className="col-span-1">
-                <ul className="text-#b2d7ff list-disc list-inside pl-10">
+                <ul className="text-#b2d7ff list-disc list-inside lg:pl-10">
                   {diseasesData.map((item) => {
                     if (item.diseaseType === 'injuries') {
                       return item.diseases.map((disease) => (
@@ -81,7 +81,7 @@ export default function DiseasesSection() {
                 </ul>
               </div>
               <div className="col-span-1">
-                <ul className="text-#b2d7ff list-disc list-inside pl-10">
+                <ul className="text-#b2d7ff list-disc list-inside lg:pl-10">
                   {diseasesData.map((item) => {
                     if (item.diseaseType === 'bodyParts') {
                       return item.diseases.map((disease) => (
@@ -103,33 +103,33 @@ export default function DiseasesSection() {
             </button>
           </div>
         </div>
-        <div className="col-span-1 ">
-          <div className="grid grid-flow-col grid-cols-2 grid-rows-2">
+        <div className="lg:col-span-1">
+          <div className="lg:grid grid-flow-col grid-cols-2 grid-rows-2">
             <div
-              className=" p-9.7rem bg-100% bg-no-repeat relative"
+              className=" p-9.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease1}` }}
             >
-              <p className="absolute bottom-20px right-20px">
+              <p className="absolute bottom-20px right-20px  text-white w-24">
                 Shoulder and Upper Limb
               </p>
             </div>
             <div
-              className=" p-9.7rem bg-100% bg-no-repeat relative"
+              className=" p-9.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease2}` }}
             >
-              <p className="absolute bottom-20px right-20px">Bones</p>
+              <p className="absolute bottom-20px right-20px  text-white">Bones</p>
             </div>
             <div
-              className=" p-9.7rem bg-100% bg-no-repeat relative"
+              className=" p-9.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease3}` }}
             >
-              <p className="absolute bottom-20px right-20px">Sports Injury</p>
+              <p className="absolute bottom-20px right-20px text-white w-24">Sports Injury</p>
             </div>
             <div
-              className=" p-9.7rem bg-100% bg-no-repeat relative"
+              className=" p-9.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease4}` }}
             >
-              <p className="absolute bottom-20px right-20px">Joint Pain</p>
+              <p className="absolute bottom-20px right-20px  text-white w-24">Joint Pain</p>
             </div>
           </div>
         </div>

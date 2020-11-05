@@ -7,8 +7,12 @@ import MenuBar from './Menubar';
 import Hero from './Hero';
 import Introduction from './Introduction';
 import DiseasesSection from './DiseasesSection';
-import DoctorsSection from './DoctorsSection';
+import DoctorsInfoSection from './DoctorsInfoSection';
 import AppointmentMessage from './AppointmentMessage';
+import Footer from './Footer';
+
+
+// import NewPage from './NewPage';
 
 export default function Homepage() {
   const { t } = useTranslation();
@@ -22,8 +26,10 @@ export default function Homepage() {
       <Hero />
       <Introduction />
       <DiseasesSection />
-      <DoctorsSection />
+      <DoctorsInfoSection />
       <AppointmentMessage />
+      {/* <NewPage /> */}
+      <Footer />
       {/* <Trans i18nKey="title">There! I am homepage</Trans>{' '}
       <div>{t('title')}</div>
       <p>Hello World</p> */}
