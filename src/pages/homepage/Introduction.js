@@ -1,8 +1,8 @@
 import React from 'react';
-import Logo1 from '../../assets/home-icon-img-01.png';
-import Logo2 from '../../assets/home-icon-img-02.png';
-import Logo3 from '../../assets/home-icon-img-03.png';
-import Logo4 from '../../assets/home-icon-img-04.png';
+import Logo1 from '../../assets/images/home-icon-img-01.png';
+import Logo2 from '../../assets/images/home-icon-img-02.png';
+import Logo3 from '../../assets/images/home-icon-img-03.png';
+import Logo4 from '../../assets/images/home-icon-img-04.png';
 
 const cardData = [
   {
@@ -12,19 +12,19 @@ const cardData = [
     value: 'understandExpats',
   },
   {
-    cardId: '0',
+    cardId: '1',
     cardLogoLink: Logo2,
     cardLogoAlt: 'patient',
     value: 'fullTreatment',
   },
   {
-    cardId: '0',
+    cardId: '2',
     cardLogoLink: Logo3,
     cardLogoAlt: 'doctor',
     value: 'dedicatedDoctor',
   },
   {
-    cardId: '0',
+    cardId: '3',
     cardLogoLink: Logo4,
     cardLogoAlt: 'services',
     value: 'personalService',

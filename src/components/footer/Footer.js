@@ -1,6 +1,6 @@
 import React from 'react';
-import PhoneLogo from '../../assets/call-icon-footer.svg';
-import MapMarker from '../../assets/map-marker.svg';
+import PhoneLogo from '../../assets/images/call-icon-footer.svg';
+import MapMarker from '../../assets/images/map-marker.svg';
 
 export default function Footer() {
   return (

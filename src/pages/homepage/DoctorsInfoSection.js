@@ -1,6 +1,6 @@
 import React from 'react';
-import Doctor1 from '../../assets/doctor1.jpg';
-import Doctor2 from '../../assets/doctor2.jpg';
+import Doctor1 from '../../assets/images/doctor1.jpg';
+import Doctor2 from '../../assets/images/doctor2.jpg';
 
 const doctorsList = [
   {

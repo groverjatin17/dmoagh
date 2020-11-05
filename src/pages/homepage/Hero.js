@@ -1,5 +1,5 @@
 import React from 'react'
-import Athlete from '../../assets/athlete.png';
+import Athlete from '../../assets/images/athlete.png';
 
 export default function Hero() {
     return (

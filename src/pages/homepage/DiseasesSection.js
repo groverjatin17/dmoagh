@@ -1,9 +1,9 @@
 import React from 'react';
-import Spine from '../../assets/spine-back.jpg';
-import Disease1 from '../../assets/disease01.jpg';
-import Disease2 from '../../assets/disease02.jpg';
-import Disease3 from '../../assets/disease03.jpg';
-import Disease4 from '../../assets/disease04.jpg';
+import Spine from '../../assets/images/spine-back.jpg';
+import Disease1 from '../../assets/images/disease01.jpg';
+import Disease2 from '../../assets/images/disease02.jpg';
+import Disease3 from '../../assets/images/disease03.jpg';
+import Disease4 from '../../assets/images/disease04.jpg';
 
 const diseasesData = [
   {

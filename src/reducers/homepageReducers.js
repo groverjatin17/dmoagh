@@ -33,8 +33,8 @@ const menuItems = [
         },
         {
           subItemId: 1,
-          subItemTitle: 'X-Ray Testing',
-          subItemLink: '/xrayTesting',
+          subItemTitle: 'Facilities',
+          subItemLink: '/facilities',
         },
         {
           subItemId: 2,

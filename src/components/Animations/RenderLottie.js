@@ -1,9 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 
-// import animationData from '../../assets/lottie-files/doctor-patient.json';
-
-export default function Doctor({ animationData }) {
+export default function Doctor({ animationData, width, height }) {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -13,9 +11,12 @@ export default function Doctor({ animationData }) {
     },
   };
 
+  const lottieHeight = height || 400;
+  const lottieWidth = width || 400;
+
   return (
     <div>
-      <Lottie options={defaultOptions} height={400} width={400} />
+      <Lottie options={defaultOptions} height={lottieHeight} width={lottieWidth} />
     </div>
   );
 }

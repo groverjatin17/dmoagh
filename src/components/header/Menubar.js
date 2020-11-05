@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import MenuIcon from '../../assets/menu-icon.svg';
+import MenuIcon from '../../assets/images/menu-icon.svg';
 import MobileMenuBar from './MobileMenuBar';
 
 const useStyles = makeStyles((theme) => ({

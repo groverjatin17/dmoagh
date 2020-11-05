@@ -1,8 +1,8 @@
 import React from 'react';
-import Logo from '../../assets/hospital-logo.svg';
-import HospitalName from '../../assets/hospital-name.svg';
-import HospitalNamesm from '../../assets/hospital-name-mobile.svg';
-import PhoneLogo from '../../assets/call-icon.svg';
+import Logo from '../../assets/images/hospital-logo.svg';
+import HospitalName from '../../assets/images/hospital-name.svg';
+import HospitalNamesm from '../../assets/images/hospital-name-mobile.svg';
+import PhoneLogo from '../../assets/images/call-icon.svg';
 
 export default function LogoBar() {
   return (
