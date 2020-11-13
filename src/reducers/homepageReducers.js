@@ -1,4 +1,4 @@
-import { MENU, CURRENT_SUBMENU } from '../actions/Homepage.actions';
+import { CURRENT_SUBMENU } from '../actions/Homepage.actions';
 
 const menuItems = [
     {
@@ -18,7 +18,7 @@ const menuItems = [
         {
           subItemId: 2,
           subItemTitle: 'Our Gallery',
-          subItemLink: '/ourGallery',
+          subItemLink: '/gallery',
         },
       ],
     },
@@ -49,7 +49,7 @@ const menuItems = [
       subItems: [
         {
           subItemId: 0,
-          subItemTitle: 'Knee Replacement Suregery',
+          subItemTitle: 'Knee Replacement Surgery',
           subItemLink: '/kneeReplacement',
         },
         {
@@ -62,16 +62,19 @@ const menuItems = [
     {
       menuItemId: 3,
       menuItemTitle: 'FAQ',
+      menuLink: '/faq',
       subItems: [],
     },
     {
       menuItemId: 4,
-      menuItemTitle: 'Book an Appointment',
+      menuItemTitle: 'Book Appointment',
+      menuLink: '/appointment',
       subItems: [],
     },
     {
       menuItemId: 5,
       menuItemTitle: 'Contact Us',
+      menuLink: '/contactUs',
       subItems: [],
     },
   ];
@@ -83,11 +86,6 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case MENU:
-      return {
-        ...state,
-        menu: action.payload,
-      };
     case CURRENT_SUBMENU:
       return {
         ...state,

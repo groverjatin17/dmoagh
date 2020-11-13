@@ -1,4 +1,5 @@
 import React from 'react';
+import { navigate } from '@reach/router';
 
 export default function AppointmentMessage() {
   return (
@@ -10,6 +11,7 @@ export default function AppointmentMessage() {
       <button
         type="button"
         className="bg-white text-xl font-semibold text-blue-700 rounded-2xl px-6 py-1 focus:outline-none transform hover:scale-90"
+        onClick={() => navigate('/appointment')}
       >
         Book Appointment
       </button>

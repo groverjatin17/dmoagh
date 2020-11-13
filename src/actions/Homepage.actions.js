@@ -1,6 +1,5 @@
 // This file contains actions for this project
 
-export const MENU = 'MENU';
 export const CURRENT_SUBMENU = 'CURRENT_SUBMENU';
 // export const LOCALE = 'LOCALE';
 // export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';

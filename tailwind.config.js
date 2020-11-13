@@ -5,6 +5,9 @@ module.exports = {
       'openSans': ['Open Sans'],
     },
     extend: {
+      width: {
+        '80': '20rem'
+      },
       height: {
         '365px': '365px'
       },

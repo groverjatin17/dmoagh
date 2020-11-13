@@ -6,7 +6,7 @@ import AppointmentForm from './AppointmentForm';
 export default function Example() {
 
   return (
-    <div className="flex flex-col lg:flex-row mb-24">
+    <div className="flex flex-col lg:flex-row">
       <div className=" block lg:hidden lg:m-24">
         <Lottie animationData={LOTTIE_MAPPING.APPOINTMENT} height={350} width={350} />
       </div>

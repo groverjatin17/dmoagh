@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link, navigate } from '@reach/router';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,7 +10,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import MenuIcon from '../../assets/images/menu-icon.svg';
+import MenuIcon from '../../assets/icons/menu-icon.svg';
+import CloseIcon from '../../assets/icons/close.svg';
 import MobileMenuBar from './MobileMenuBar';
 
 const useStyles = makeStyles((theme) => ({
@@ -22,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     display: 'none',
-    color:"#001653",
-    textTransform: "uppercase",
-    fontSize: "16px",
+    color: '#001653',
+    textTransform: 'uppercase',
+    fontSize: '16px',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
@@ -66,10 +68,9 @@ export default function Menubar() {
 
   const handleMobileMenuOpen = (event) => {
     if (mobileMoreAnchorEl) {
-      handleMobileMenuClose(null)
+      handleMobileMenuClose(null);
     } else {
       setMobileMoreAnchorEl(event.currentTarget);
-
     }
   };
 
@@ -110,16 +111,29 @@ export default function Menubar() {
       >
         {submenu.length > 0 &&
           submenu.map((subItem) => (
-            <StyledMenuItem key={subItem.subItemId}>
-              <ListItemText primary={subItem.subItemTitle} />
-            </StyledMenuItem>
+            <Link
+              to={subItem.subItemLink}
+              key={subItem.subItemId}
+              onClick={() => {
+                dispatch({
+                  type: 'CURRENT_SUBMENU',
+                  payload: null,
+                });
+              }}
+            >
+              <StyledMenuItem>
+                <ListItemText primary={subItem.subItemTitle} />
+              </StyledMenuItem>
+            </Link>
           ))}
       </Menu>
     </div>
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = isMobileMenuOpen && <MobileMenuBar />;
+  const renderMobileMenu = isMobileMenuOpen && (
+    <MobileMenuBar handleMobileMenuClose={handleMobileMenuClose} />
+  );
 
   return (
     <>
@@ -138,6 +152,9 @@ export default function Menubar() {
                         type: 'CURRENT_SUBMENU',
                         payload: menuItem.subItems,
                       });
+                      if (menuItem.menuLink) {
+                        navigate(menuItem.menuLink);
+                      }
                       handleProfileMenuOpen(e);
                     }}
                   >
@@ -155,7 +172,11 @@ export default function Menubar() {
                 onClick={handleMobileMenuOpen}
                 color="inherit"
               >
-                <img src={MenuIcon} alt="menu-icon" className="h-10" />
+                {!mobileMoreAnchorEl ? (
+                  <img src={MenuIcon} alt="menu-icon" className="h-10" />
+                ) : (
+                  <img src={CloseIcon} alt="menu-icon" className="h-10" />
+                )}
               </IconButton>
             </div>
           </Toolbar>

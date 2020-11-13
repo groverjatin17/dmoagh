@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { makeStyles } from '@material-ui/core/styles';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
+import { Link } from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MobileMenuBar() {
+export default function MobileMenuBar({ handleMobileMenuClose }) {
   const classes = useStyles();
   const [expandedPanel, setPanelState] = useState(null);
 
@@ -36,7 +31,7 @@ export default function MobileMenuBar() {
     if (panelId === expandedPanel) {
       setPanelState(null);
     } else {
-        setPanelState(panelId);
+      setPanelState(panelId);
     }
   };
 
@@ -50,7 +45,7 @@ export default function MobileMenuBar() {
         menu.map((menuItem) => {
           if (menuItem.subItems.length > 0) {
             return (
-              <>
+              <div key={menuItem.menuItemId}>
                 <ListItem
                   button
                   onClick={() => handleClick(menuItem.menuItemId)}
@@ -69,23 +64,31 @@ export default function MobileMenuBar() {
                 >
                   <List component="div" disablePadding>
                     {menuItem.subItems.map((subItem) => (
-                      <ListItem
+                      <Link
+                        to={subItem.subItemLink}
                         key={subItem.subItemId}
-                        button
-                        className={classes.nested}
+                        onClick={handleMobileMenuClose}
                       >
-                        <ListItemText primary={subItem.subItemTitle} />
-                      </ListItem>
+                        <ListItem button className={classes.nested}>
+                          <ListItemText primary={subItem.subItemTitle} />
+                        </ListItem>
+                      </Link>
                     ))}
                   </List>
                 </Collapse>
-              </>
+              </div>
             );
           }
           return (
-            <ListItem key={menuItem.menuItemId} button>
-              <ListItemText primary={menuItem.menuItemTitle} />
-            </ListItem>
+            <Link
+              to={menuItem.menuLink}
+              key={menuItem.menuItemId}
+              onClick={handleMobileMenuClose}
+            >
+              <ListItem button>
+                <ListItemText primary={menuItem.menuItemTitle} />
+              </ListItem>
+            </Link>
           );
         })}
     </List>

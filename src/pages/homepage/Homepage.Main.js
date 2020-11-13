@@ -6,7 +6,7 @@ import Introduction from './Introduction';
 import DiseasesSection from './DiseasesSection';
 import DoctorsInfoSection from './DoctorsInfoSection';
 import AppointmentMessage from './AppointmentMessage';
-// import Footer from '../../components/footer/Footer';
+import Testimonials from './Testimonials'
 
 // import NewPage from './NewPage';
 
@@ -20,6 +20,7 @@ export default function Homepage() {
       <DiseasesSection />
       <DoctorsInfoSection />
       <AppointmentMessage />
+      <Testimonials />
       {/* <NewPage /> */}
       {/* <Footer /> */}
       {/* <Trans i18nKey="title">There! I am homepage</Trans>{' '}

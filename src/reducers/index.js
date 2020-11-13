@@ -6,7 +6,7 @@ import homepageReducers from './homepageReducers';
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['homepageReducers'],
+    whitelist: [],
 };
 
 const rootReducer = combineReducers({

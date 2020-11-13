@@ -69,7 +69,20 @@ export default function Introduction() {
             understanding the patient’s needs, providing realistic expectations
             and practical solutions for their problems.
           </p>
-          <a href="#blah" className="text-lg font-bold p-6 lg:p-0">READ MORE {'>'}</a>
+          <a href="#blah" className="text-lg font-bold p-6 lg:p-0">
+            READ MORE
+          </a>
+          <svg
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            className="w-4 h-4 ml-2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </div>
       </div>
     </div>
