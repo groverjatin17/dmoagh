@@ -8,12 +8,7 @@ const menuItems = [
         {
           subItemId: 0,
           subItemTitle: 'Profile Of Doctor',
-          subItemLink: '/profileOfDoctor',
-        },
-        {
-          subItemId: 1,
-          subItemTitle: 'Our Clinic',
-          subItemLink: '/ourClinic',
+          subItemLink: '/doctor',
         },
         {
           subItemId: 2,
@@ -38,8 +33,8 @@ const menuItems = [
         },
         {
           subItemId: 2,
-          subItemTitle: 'Surgery',
-          subItemLink: '/surgery',
+          subItemTitle: 'Laboratory',
+          subItemLink: '/laboratory',
         },
       ],
     },
@@ -49,22 +44,22 @@ const menuItems = [
       subItems: [
         {
           subItemId: 0,
-          subItemTitle: 'Knee Replacement Surgery',
-          subItemLink: '/kneeReplacement',
+          subItemTitle: 'Caesarean and Delivery',
+          subItemLink: '/delivery',
         },
-        {
-          subItemId: 1,
-          subItemTitle: 'ACL Reconstruction',
-          subItemLink: '/aclReconstruction',
-        },
+        // {
+        //   subItemId: 1,
+        //   subItemTitle:  'Discectomy',
+        //   subItemLink: '/discectomy',
+        // },
       ],
     },
-    {
-      menuItemId: 3,
-      menuItemTitle: 'FAQ',
-      menuLink: '/faq',
-      subItems: [],
-    },
+    // {
+    //   menuItemId: 3,
+    //   menuItemTitle: 'FAQ',
+    //   menuLink: '/faq',
+    //   subItems: [],
+    // },
     {
       menuItemId: 4,
       menuItemTitle: 'Book Appointment',

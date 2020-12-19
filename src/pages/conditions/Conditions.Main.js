@@ -16,9 +16,8 @@ export default function Conditions() {
         style={{
           backgroundImage: `url(${MuscularSystem})`,
         }}
-        className="object-cover bg-no-repeat bg-center"
+        className="object-cover bg-no-repeat bg-center hidden lg:block"
       >
-        {/* <img src={MuscularSystem} alt="muscular-system" className="invisible" /> */}
         <div className="grid grid-cols-2 mt-32">
           <div className="grid grid-rows-3 ml-20">
             <div className="row-span-1 mb-6">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Physio from '../../assets/images/physio.jpg';
-import PatientRoom from '../../assets/images/patient-room.jpg';
+import Ultrasound from '../../assets/images/ultrasound.jpg';
+import xray from '../../assets/images/xray.jpg';
 
 export default function Facilities() {
   return (
@@ -69,12 +70,12 @@ export default function Facilities() {
               </a>
             </div>
             <div className="lg:w-80 sm:order-none order-first sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-              <img src={PatientRoom} alt="PatientRoom" className="rounded-3xl" />
+              <img src={xray} alt="xray" className="rounded-3xl" />
             </div>
           </div>
           <div className="flex items-center lg:w-4/5 mx-auto sm:flex-row flex-col">
             <div className="lg:w-80 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-            <img src={Physio} alt="physio" className="rounded-3xl" />
+            <img src={Ultrasound} alt="Ultrasound" className="rounded-3xl" />
             </div>
             <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">

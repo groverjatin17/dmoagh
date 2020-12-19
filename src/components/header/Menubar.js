@@ -4,7 +4,6 @@ import { Link, navigate } from '@reach/router';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -18,9 +17,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: 'white',
     width: '100%',
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
   },
   title: {
     display: 'none',
@@ -130,7 +126,6 @@ export default function Menubar() {
     </div>
   );
 
-  const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = isMobileMenuOpen && (
     <MobileMenuBar handleMobileMenuClose={handleMobileMenuClose} />
   );
@@ -165,19 +160,20 @@ export default function Menubar() {
                 ))}
             </div>
             <div className={classes.sectionMobile}>
-              <IconButton
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
+              <span
                 onClick={handleMobileMenuOpen}
                 color="inherit"
+                className="outline-none"
+                role='button'
+                onKeyDown={()=>{}}
+                tabIndex={0}
               >
                 {!mobileMoreAnchorEl ? (
-                  <img src={MenuIcon} alt="menu-icon" className="h-10" />
+                  <img src={MenuIcon} alt="menu-icon" className="h-10 outline-none" />
                 ) : (
-                  <img src={CloseIcon} alt="menu-icon" className="h-10" />
+                  <img src={CloseIcon} alt="menu-icon" className="h-10 outline-none" />
                 )}
-              </IconButton>
+              </span>
             </div>
           </Toolbar>
         </AppBar>
