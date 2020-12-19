@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+const axios = require('axios');
 
 export default function ContactUsForm() {
   const { register, handleSubmit, errors } = useForm({
@@ -13,17 +14,25 @@ export default function ContactUsForm() {
   const [submitting, setSubmitting] = useState(false);
   return (
     <form
-    className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-center"
       onSubmit={handleSubmit(async (formData) => {
         const { name, email, query } = formData;
-        console.log("query", query);
-        console.log("email", email);
-        console.log("name", name);
         setSubmitting(true);
         try {
-            //do this cll api
+          //do this cll api
+          axios
+            .post('http://localhost:8080/api/sendMail', {
+              name,
+              email,
+              message: query,
+            })
+            .then((response) => console.log(response))
+            .then(() => {
+              setSubmitting(false);
+            })
+            .catch((error) => console.error('Error sending mail ', error));
         } catch (error) {
-          console.log('Error sending mail', error);
+          console.error('Error sending mail', error);
         }
         setSubmitting(false);
       })}
@@ -57,18 +66,18 @@ export default function ContactUsForm() {
         {errors.email && <p>{errors.email.message}</p>}
       </div>
       <div>
-        <label htmlFor="email">
+        <label htmlFor="query">
           Query
           <input
             type="text"
-            name="email"
-            id="email"
+            name="query"
+            id="query"
             ref={register({
               required: 'Please Enter your Query here',
             })}
           />
         </label>
-        {errors.email && <p>{errors.email.message}</p>}
+        {errors.query && <p>{errors.query.message}</p>}
       </div>
       <div>
         <button type="submit" disabled={submitting}>

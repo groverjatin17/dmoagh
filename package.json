@@ -1,74 +1,36 @@
 {
-  "name": "dmoagh",
-  "version": "0.1.0",
-  "private": true,
+  "name": "dmaogh",
+  "version": "1.0.0",
+  "description": "The backend server of Darshan Memorial",
+  "main": "index.js",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@reach/router": "^1.3.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "date-fns": "^2.16.1",
-    "i18next": "^19.8.2",
-    "i18next-browser-languagedetector": "^6.0.1",
-    "i18next-http-backend": "^1.0.21",
-    "react": "^16.13.1",
-    "react-datepicker": "^3.3.0",
-    "react-dom": "^16.13.1",
-    "react-hook-form": "^6.10.1",
-    "react-i18next": "^11.7.3",
-    "react-lottie": "^1.2.3",
-    "react-redux": "^7.2.1",
-    "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
-    "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.3.0"
-  },
-  "scripts": {
-    "build:css": "postcss src/tailwind/tailwind.src.css -o src/tailwind/tailwind.css",
-    "watch:css": "postcss src/tailwind/tailwind.src.css -o src/tailwind/tailwind.css --watch",
-    "env:dev": "cross-env NODE_ENV=development",
-    "env:prod": "cross-env NODE_ENV=production",
-    "react-scripts:start": "timeout 5 && react-scripts start",
-    "react-scripts:build": "react-scripts build",
-    "start": "run-p env:dev watch:css react-scripts:start",
-    "build": "run-s env:prod build:css react-scripts:build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "googleapis": "^66.0.0",
+    "nodemailer": "^6.4.17"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "autoprefixer": "^9.7.5",
-    "cross-env": "^7.0.2",
-    "cssnano": "^4.1.10",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.1",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.0",
-    "prettier": "2.0.2",
-    "purgecss": "^2.1.0",
-    "tailwindcss": "^1.9.5"
-  }
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "build": "cd client && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groverjatin17/dmoagh.git"
+  },
+  "author": "Jatin Grover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/groverjatin17/dmoagh/issues"
+  },
+  "homepage": "https://github.com/groverjatin17/dmoagh#readme"
 }
