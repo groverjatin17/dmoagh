@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router } from '@reach/router';
+import { Toaster } from 'react-hot-toast';
 import Homepage from './pages/homepage/Homepage.Main';
 import ContactUs from './pages/contactUs/ContactUs.Main';
 import BookAppointment from './pages/appointment/BookAppointment.Main';
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <Toaster />
       <Router>
         <Homepage path="/" />
         <ContactUs path="/contactUs" />

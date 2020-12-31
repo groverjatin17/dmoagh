@@ -3,7 +3,7 @@ import Lottie from '../../components/Animations/RenderLottie';
 import LOTTIE_MAPPING from '../../common/global-constants/LottieMapping';
 import AppointmentForm from './AppointmentForm';
 
-export default function Example() {
+export default function BookAppointment() {
 
   return (
     <div className="flex flex-col lg:flex-row">

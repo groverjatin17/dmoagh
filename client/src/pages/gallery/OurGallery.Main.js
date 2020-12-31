@@ -43,7 +43,6 @@ export default function OurGallery() {
           </div>
         </div>
       </section>
-      GitHub
     </div>
   );
 }
