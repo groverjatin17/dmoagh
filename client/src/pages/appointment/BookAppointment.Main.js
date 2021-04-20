@@ -14,7 +14,7 @@ export default function BookAppointment() {
         <Lottie animationData={LOTTIE_MAPPING.APPOINTMENT} width={600} />
       </div>
       <div className="flex flex-col justify-center items-center">
-        <h1> Book Appointment</h1>
+        <h1 className="text-xl text-blue-800 underline"> Book Appointment</h1>
         <AppointmentForm />
       </div>
     </div>

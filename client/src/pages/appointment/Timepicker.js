@@ -5,7 +5,7 @@ import setMinutes from 'date-fns/setMinutes';
 import setHours from 'date-fns/setHours';
 import 'react-datepicker/dist/react-datepicker.css';
 
-export default function CustomDatePicker({ callback }) {
+export default function CustomTimePicker({ callback }) {
   const [startDate, setStartDate] = useState(null);
 
   const handleColor = (time) => {
@@ -14,28 +14,20 @@ export default function CustomDatePicker({ callback }) {
       : 'text-indigo-900';
   };
 
-  const excludeDates = (value) => {
-    const listOfExcludedDates = [];
-    Array.from(
-      { length: value },
-      (x, i) => i && listOfExcludedDates.push(subDays(new Date(), i)),
-    );
-    return listOfExcludedDates;
-  };
-
   return (
     <DatePicker
-      // showTimeSelect
+      showTimeSelect
+      showTimeSelectOnly
       selected={startDate}
       onChange={(date) => {
         setStartDate(date);
-        callback(date);
+        callback(date.toLocaleTimeString());
       }}
       timeClassName={handleColor}
-      placeholderText="Select Date"
+      placeholderText="Select Time"
       minTime={setHours(setMinutes(new Date(), 0), 8)}
       maxTime={setHours(setMinutes(new Date(), 0), 20)}
-      excludeDates={excludeDates(30)}
+      dateFormat="h:mm aa"
     />
   );
 }

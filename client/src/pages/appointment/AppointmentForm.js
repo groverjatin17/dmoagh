@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import CustomDatePicker from './Datepicker';
+import CustomTimePicker from './Timepicker';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { getDay, getDate, getMonth, getTime, format } from 'date-fns';
+import { format } from 'date-fns';
 
 export default function AppointmentForm() {
   const { register, handleSubmit, errors } = useForm({
@@ -15,6 +16,7 @@ export default function AppointmentForm() {
 
   const [submitting, setSubmitting] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
 
   return (
     <form
@@ -58,8 +60,9 @@ export default function AppointmentForm() {
     >
       <div className="flex flex-col justify-center items-center">
         <label htmlFor="name">
-          Name
+          Name:
           <input
+            className="ml-2"
             type="text"
             name="name"
             id="name"
@@ -70,10 +73,11 @@ export default function AppointmentForm() {
         </label>
         {errors.name && <p>{errors.name.message}</p>}
       </div>
-      <div>
+      <div className="flex flex-col justify-center items-center">
         <label htmlFor="email">
-          Email Address
+          Email:
           <input
+            className="ml-2"
             type="text"
             name="email"
             id="email"
@@ -84,11 +88,28 @@ export default function AppointmentForm() {
         </label>
         {errors.email && <p>{errors.email.message}</p>}
       </div>
-      <CustomDatePicker callback={(date) => setSelectedDate(date)} />
-      <p> Selected Date is {selectedDate && selectedDate.toDateString()}</p>
       <div>
-        <button type="submit" disabled={submitting}>
-          Book Appointment
+        <span>Date: </span>
+        <CustomDatePicker callback={(date) => setSelectedDate(date)} />
+      </div>
+      <div>
+        <span>Time: </span>
+        <CustomTimePicker callback={(date) => setSelectedTime(date)} />
+      </div>
+      {selectedDate && selectedTime && (
+        <p>
+          {' '}
+          Confirm appointment on {selectedDate.toDateString()} at {selectedTime}
+        </p>
+      )}
+      <div>
+        <button
+          className="text-xl font-semibold text-blue-700 rounded-2xl border-2 border-blue-600
+          px-4 py-1 focus:outline-none transform hover:scale-90"
+          type="submit"
+          disabled={submitting}
+        >
+          Book It!
         </button>
       </div>
     </form>
