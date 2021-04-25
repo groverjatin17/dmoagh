@@ -1,5 +1,6 @@
 // This file contains actions for this project
 
+export const SET_MENU = 'SET_MENU';
 export const CURRENT_SUBMENU = 'CURRENT_SUBMENU';
 // export const LOCALE = 'LOCALE';
 // export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
@@ -8,6 +9,16 @@ export const CURRENT_SUBMENU = 'CURRENT_SUBMENU';
 // export const SEARCHED_IMAGES = 'SEARCHED_IMAGES';
 // export const SEARCH_QUERY = 'SEARCH_QUERY';
 // export const MEDIA_DEVICE = 'MEDIA_DEVICE';
+
+
+export function setMenu(value) {
+    return (dispatch) => {
+        dispatch({
+            type: SET_MENU,
+            payload: value,
+        });
+    };
+}
 
 export function setSubMenu(value) {
     return (dispatch) => {

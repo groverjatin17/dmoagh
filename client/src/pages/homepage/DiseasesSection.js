@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next'
 import Spine from '../../assets/images/spine-back.jpg';
 import Disease1 from '../../assets/images/disease01.jpg';
 import Disease2 from '../../assets/images/disease02.jpg';
@@ -19,7 +20,7 @@ const diseasesData = [
       },
       {
         itemId: 2,
-        itemValue: 'trauma',
+        itemValue: 'fracture',
       },
       {
         itemId: 3,
@@ -36,20 +37,21 @@ const diseasesData = [
       },
       {
         itemId: 5,
-        itemValue: 'hip_knee',
+        itemValue: 'hipKnee',
       },
       {
         itemId: 6,
-        itemValue: 'limbs',
+        itemValue: 'delivery',
       },
       {
         itemId: 7,
-        itemValue: 'foot_ankle',
+        itemValue: 'spineInjury',
       },
     ],
   },
 ];
 export default function DiseasesSection() {
+  const {t} = useTranslation();
   return (
     <div>
       <div className="lg:grid lg:grid-cols-2 ">
@@ -57,13 +59,10 @@ export default function DiseasesSection() {
           className="lg:col-span-1 bg-no-repeat relative"
           style={{ backgroundImage: `url(${Spine}` }}
         >
-          <div className="mx-10 py-10 lg:py-20 lg:pl-48 lg:pr-10 lg:mr-5">
-            <h1 className="text-4xl text-white font-serif mb-6">Conditions</h1>
+          <div className="mx-10 py-10 lg:py-20 lg:pl-24 lg:pr-10 lg:mr-5">
+            <h1 className="text-4xl text-white font-serif mb-6">{t(`diseases.header`)}</h1>
             <p className="text-#b2d7ff text-base font-openSans leading-loose mb-6">
-              Dr Alan Cheung specialises in all areas of Sports Injuries and
-              Adult Reconstruction. He also performs Robotic Surgery, and
-              manages General Adult and Paediatric Trauma, and Musculoskeletal
-              Tumours.
+              {t(`diseases.description`)}
             </p>
             <div className="grid grid-cols-2 mb-6">
               <div className="col-span-1">
@@ -72,7 +71,7 @@ export default function DiseasesSection() {
                     if (item.diseaseType === 'injuries') {
                       return item.diseases.map((disease) => (
                         <li key={disease.itemId} className="mb-2">
-                          {disease.itemValue}
+                          {t(`diseases.${disease.itemValue}`)}
                         </li>
                       ));
                     }
@@ -86,7 +85,7 @@ export default function DiseasesSection() {
                     if (item.diseaseType === 'bodyParts') {
                       return item.diseases.map((disease) => (
                         <li key={disease.itemId} className="mb-2">
-                          {disease.itemValue}
+                          {t(`diseases.${disease.itemValue}`)}
                         </li>
                       ));
                     }

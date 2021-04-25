@@ -36,6 +36,7 @@ export default function CustomDatePicker({ callback }) {
       minTime={setHours(setMinutes(new Date(), 0), 8)}
       maxTime={setHours(setMinutes(new Date(), 0), 20)}
       excludeDates={excludeDates(30)}
+      className="border-b-2 border-blue-700 focus:border-red-600 focus:outline-none rounded-sm"
     />
   );
 }

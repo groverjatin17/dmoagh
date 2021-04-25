@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from '@reach/router';
+import { useTranslation } from 'react-i18next';
 import Logo from '../../assets/icons/hospital-logo.svg';
 import HospitalName from '../../assets/icons/hospital-name.svg';
 import HospitalNamesm from '../../assets/icons/hospital-name-mobile.svg';
 import PhoneLogo from '../../assets/icons/call-icon.svg';
 
 export default function LogoBar() {
+  const { t } = useTranslation();
+
   return (
     <div className="lg:px-16 flex-col lg:flex-row flex justify-between">
       <div className=" lg:hidden grid grid-cols-3 mt-4">
@@ -21,7 +24,9 @@ export default function LogoBar() {
             <img src={PhoneLogo} alt="phone-icon" className="h-10 " />
             <p className="text-blue-900 text-xl">9872480059 </p>
           </div>
-          <span className="text-gray-600">Speak with us today</span>
+          <span className="text-gray-600 text-center">
+            {t('speakWithUsToday')}
+          </span>
         </div>
       </div>
       <div className="flex my-3">
@@ -48,7 +53,9 @@ export default function LogoBar() {
           <img src={PhoneLogo} alt="phone-icon" className="h-10 " />
           <p className="text-blue-900 text-xl">9872480059 </p>
         </div>
-        <span className="text-gray-600">Speak with us today</span>
+        <span className="text-gray-600 text-center">
+          {t('speakWithUsToday')}
+        </span>
       </div>
     </div>
   );

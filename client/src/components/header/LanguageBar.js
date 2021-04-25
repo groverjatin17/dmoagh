@@ -17,9 +17,16 @@ export default function LanguageBar() {
       <button
         className="p-1"
         type="button"
-        onClick={() => i18n.changeLanguage('de')}
+        onClick={() => i18n.changeLanguage('hi')}
       >
-        DE
+        HI
+      </button>
+      <button
+        className="p-1"
+        type="button"
+        onClick={() => i18n.changeLanguage('pa')}
+      >
+        PA
       </button>
     </div>
   );

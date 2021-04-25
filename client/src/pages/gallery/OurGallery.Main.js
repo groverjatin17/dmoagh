@@ -6,7 +6,7 @@ export default function OurGallery() {
   function renderImage(item) {
     const { title, image, description } = item
     return (
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
+      <div className="lg:w-1/3 sm:w-1/2 p-4" key={item.title}>
               <div className="flex relative">
                 <img
                   alt="gallery"

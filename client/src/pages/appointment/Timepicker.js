@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
-import subDays from 'date-fns/subDays';
 import setMinutes from 'date-fns/setMinutes';
 import setHours from 'date-fns/setHours';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -28,6 +27,7 @@ export default function CustomTimePicker({ callback }) {
       minTime={setHours(setMinutes(new Date(), 0), 8)}
       maxTime={setHours(setMinutes(new Date(), 0), 20)}
       dateFormat="h:mm aa"
+      className="border-b-2 border-blue-700 focus:border-red-600 focus:outline-none rounded-sm"
     />
   );
 }

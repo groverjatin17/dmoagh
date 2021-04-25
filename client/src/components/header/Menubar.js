@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, navigate } from '@reach/router';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -8,10 +8,11 @@ import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import ListItemText from '@material-ui/core/ListItemText';
-
+import { useTranslation } from 'react-i18next';
 import MenuIcon from '../../assets/icons/menu-icon.svg';
 import CloseIcon from '../../assets/icons/close.svg';
 import MobileMenuBar from './MobileMenuBar';
+import { menuItems } from './constants';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,6 +45,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Menubar() {
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const menuItemsValue = menuItems();
+    dispatch({
+      type: 'SET_MENU',
+      payload: menuItemsValue,
+    });
+  }, [dispatch]);
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -52,7 +64,6 @@ export default function Menubar() {
 
   const menu = useSelector((state) => state.homepageReducers.menu);
   const submenu = useSelector((state) => state.homepageReducers.submenu);
-  const dispatch = useDispatch();
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -118,7 +129,7 @@ export default function Menubar() {
               }}
             >
               <StyledMenuItem>
-                <ListItemText primary={subItem.subItemTitle} />
+                <ListItemText primary={t(subItem.subItemTitle)} />
               </StyledMenuItem>
             </Link>
           ))}
@@ -154,7 +165,7 @@ export default function Menubar() {
                     }}
                   >
                     <Typography className={classes.title} variant="h6" noWrap>
-                      {menuItem.menuItemTitle}
+                      {t(menuItem.menuItemTitle)}
                     </Typography>
                   </button>
                 ))}
@@ -164,14 +175,22 @@ export default function Menubar() {
                 onClick={handleMobileMenuOpen}
                 color="inherit"
                 className="outline-none"
-                role='button'
-                onKeyDown={()=>{}}
+                role="button"
+                onKeyDown={() => {}}
                 tabIndex={0}
               >
                 {!mobileMoreAnchorEl ? (
-                  <img src={MenuIcon} alt="menu-icon" className="h-10 outline-none" />
+                  <img
+                    src={MenuIcon}
+                    alt="menu-icon"
+                    className="h-10 outline-none"
+                  />
                 ) : (
-                  <img src={CloseIcon} alt="menu-icon" className="h-10 outline-none" />
+                  <img
+                    src={CloseIcon}
+                    alt="menu-icon"
+                    className="h-10 outline-none"
+                  />
                 )}
               </span>
             </div>

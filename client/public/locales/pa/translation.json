@@ -13,12 +13,8 @@
     "bookAppointment": "Book Appointment",
     "contactUs": "Contact Us",
     "subMenu": {
-      "profileOfDoctor": "Profile Of Doctor",
-      "ourGallery": "Our Gallery",
-      "conditions": "Conditions",
-      "facilities": "Facilities",
-      "laboratory": "Laboratory",
-      "caesareanAndDelivery": "Caesarean And Delivery"
+      "profileOfDoctor": "ਗੱਲ ਕਰੋ",
+      "ourGallery": "Our Gallery"
     }
   },
   "hero": {

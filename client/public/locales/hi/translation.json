@@ -1,25 +1,17 @@
 {
-  "title": "ਗੱਲ ਕਰੋ",
+  "title": "Welcome to react using react-i18next",
   "description": {
     "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
     "part2": "Switch language between english and german using buttons above."
   },
-  "selectLanguage": "Select Language",
-  "speakWithUsToday": "Speak with us Today",
+  "selectLanguage": "भाषा चुनिए",
+  "speakWithUsToday": "आज हमारे साथ बात करें",
   "navBar": {
-    "aboutUs": "About Us",
-    "services": "Services",
-    "procedures": "Procedures",
-    "bookAppointment": "Book Appointment",
-    "contactUs": "Contact Us",
-    "subMenu": {
-      "profileOfDoctor": "Profile Of Doctor",
-      "ourGallery": "Our Gallery",
-      "conditions": "Conditions",
-      "facilities": "Facilities",
-      "laboratory": "Laboratory",
-      "caesareanAndDelivery": "Caesarean And Delivery"
-    }
+    "aboutUs": "भाषा चुनिए",
+    "services": "About Us",
+    "procedures": "About Us",
+    "bookAppointment": "About Us",
+    "contactUs": "About Us"
   },
   "hero": {
     "title": "Practical Solutions For your Problems",

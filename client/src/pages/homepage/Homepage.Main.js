@@ -8,8 +8,6 @@ import DoctorsInfoSection from './DoctorsInfoSection';
 import AppointmentMessage from './AppointmentMessage';
 import Testimonials from './Testimonials'
 
-// import NewPage from './NewPage';
-
 export default function Homepage() {
   const { t } = useTranslation();
 
@@ -21,7 +19,6 @@ export default function Homepage() {
       <DoctorsInfoSection />
       <AppointmentMessage />
       <Testimonials />
-      {/* <NewPage /> */}
       {/* <Footer /> */}
       {/* <Trans i18nKey="title">There! I am homepage</Trans>{' '}
       <div>{t('title')}</div>
