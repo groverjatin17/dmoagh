@@ -1,9 +1,4 @@
 {
-  "title": "ਗੱਲ ਕਰੋ",
-  "description": {
-    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "part2": "Switch language between english and german using buttons above."
-  },
   "selectLanguage": "Select Language",
   "speakWithUsToday": "Speak with us Today",
   "navBar": {
@@ -19,6 +14,7 @@
       "facilities": "Facilities",
       "laboratory": "Laboratory",
       "caesareanAndDelivery": "Caesarean And Delivery",
+      "surgery": "Surgery",
       "obstetrician": "Obstetrician"
     }
   },
@@ -34,7 +30,7 @@
   },
   "introduction": {
     "title": "International Orthopaedic Clinic",
-    "description": "The International Orthopaedic Clinic was established to provide expertise in Orthopaedic surgery to the local and expatriate community in Singapore and the Asia-Pacific Region. From his experiences training and working in England, Australia and Singapore, Dr Cheung believes that communication and empathy is vital for patients no matter what their background. Dr Cheung enjoys understanding the patient’s needs, providing realistic expectations and practical solutions for their problems."
+    "description": "Darshan Memorial  was established to provide expertise in Orthopaedic surgery to the local and expatriate community in India and to the international community. From his experiences training and working in Ludhiana, Kuruksheta and Muktsar, Dr Ishan believes that communication and empathy is vital for patients no matter the background. Dr Ishan enjoys understanding the patient’s needs, providing realistic expectations and practical solutions for their problems."
   },
   "diseases": {
     "header": "Conditions",
@@ -44,7 +40,7 @@
     "fracture": "Fracture",
     "osteoporosis": "Osteoporosis",
     "hipKnee": "Hip & Knee Replacement",
-    "disorders": "Muscoskeletal Disorder",
+    "disorders": "Musculoskeletal Disorders",
     "diabetes": "Diabetes",
     "delivery": "Baby Delivery",
     "spineInjury": "Spine Injury",
@@ -111,7 +107,7 @@
     },
     "icu": {
       "title": "ICU",
-      "description": "Intensive Care room with deluxe services including Ventilator and Air Conditioning."
+      "description": "Intensive Care room with deluxe services including Ventilators and Air Conditioning."
     },
     "waitingHall": {
       "title": "Waiting Hall",
@@ -202,5 +198,31 @@
   "delivery": {
     "header": "OB-GYN Doctor",
     "description": "Keeping in view that women in general prefer to be treated by an obstetrician-gynecologist (OB-GYN). We provide all the necessary services that include delivery, Cesarean surgery and child care services."
+  },
+  "surgery": {
+    "header": "Surgery",
+    "description": " All types of surgeries are done here."
+  },
+  "bookAppointmentPage": {
+    "enterDetails": "Please Enter your Details",
+    "name": "Name",
+    "namePlaceholder": "Enter your Name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your Email ",
+    "date": "Date",
+    "datePlaceholder": "Select Date",
+    "time": "Time",
+    "timePlaceholder": "Select Time",
+    "bookIt": "Book It!",
+    "confirm": "Confirm appointment on {{selectedDate}} at {{selectedTime}}"
+  },
+  "contactUs": {
+    "name": "Name",
+    "namePlaceholder": "Enter your Name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your Email ",
+    "query": "Query",
+    "queryPlaceholder": "Write your Query",
+    "sendMessage": "Send Message!"
   }
 }

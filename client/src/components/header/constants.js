@@ -51,11 +51,11 @@ export function menuItems() {
               subItemTitle: 'navBar.subMenu.caesareanAndDelivery',
               subItemLink: '/delivery',
             },
-            // {
-            //   subItemId: 1,
-            //   subItemTitle:  'Discectomy',
-            //   subItemLink: '/discectomy',
-            // },
+            {
+              subItemId: 1,
+              subItemTitle:  'navBar.subMenu.surgery',
+              subItemLink: '/surgery',
+            },
           ],
         },
         // {

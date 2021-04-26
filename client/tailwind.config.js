@@ -11,7 +11,8 @@ module.exports = {
         '80%': '80%',
       },
       height: {
-        '365px': '365px'
+        '365px': '365px',
+        '550px': '550px'
       },
       padding: {
         '9.7rem': '9.7rem'

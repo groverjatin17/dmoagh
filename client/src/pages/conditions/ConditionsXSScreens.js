@@ -10,7 +10,6 @@ const conditionsXS = (conditionsObject, t) => {
   return (
     <div>
       {Object.keys(conditionsObject).map((bodyPart) => {
-        console.log(bodyPart);
         return (
           <Accordion key={bodyPart}>
             <AccordionSummary

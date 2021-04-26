@@ -1,88 +1,228 @@
 {
-  "title": "Welcome to react using react-i18next",
-  "description": {
-    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "part2": "Switch language between english and german using buttons above."
-  },
   "selectLanguage": "भाषा चुनिए",
   "speakWithUsToday": "आज हमारे साथ बात करें",
   "navBar": {
-    "aboutUs": "भाषा चुनिए",
-    "services": "About Us",
-    "procedures": "About Us",
-    "bookAppointment": "About Us",
-    "contactUs": "About Us"
+    "aboutUs": "हमारे बारे में",
+    "services": "सेवाएं",
+    "procedures": "प्रक्रियाएं",
+    "bookAppointment": "अपॉइंटमेंट बुक करें",
+    "contactUs": "संपर्क करें",
+    "subMenu": {
+      "orthopedist": "हड्डियों का डॉक्टर",
+      "ourGallery": "हमारी गैलरी",
+      "conditions": "इलाज प्रकार",
+      "facilities": "सुविधाएं",
+      "laboratory": "टेस्ट और निदान",
+      "caesareanAndDelivery": "सिजेरियन और डिलीवरी",
+      "surgery": "सर्जरी",
+      "obstetrician": "महिला चिकित्सक"
+    }
   },
   "hero": {
-    "title": "Practical Solutions For your Problems",
-    "subTitle": "High quality orthopaedic sports injury & joint reconstruction clinic"
+    "title": "अपनी समस्याओं के लिए व्यावहारिक समाधान",
+    "subTitle": "उच्च गुणवत्ता वाले आर्थोपेडिक खेल की चोट और संयुक्त पुनर्निर्माण क्लिनिक"
   },
   "features": {
-    "understandExpats": "Understanding Expats",
-    "fullTreatment": "All Rounded Treatment",
-    "dedicatedDoctor": "Dedicated Doctor",
-    "emergencyService": "Emergency Service"
+    "understandExpats": "एक्सपैट को समझना",
+    "fullTreatment": "सभी प्रकार के उपचार",
+    "dedicatedDoctor": "समर्पित डॉक्टर",
+    "emergencyService": "आपातकालीन सेवा"
   },
   "introduction": {
-    "title": "International Orthopaedic Clinic",
-    "description": "The International Orthopaedic Clinic was established to provide expertise in Orthopaedic surgery to the local and expatriate community in Singapore and the Asia-Pacific Region. From his experiences training and working in England, Australia and Singapore, Dr Cheung believes that communication and empathy is vital for patients no matter what their background. Dr Cheung enjoys understanding the patient’s needs, providing realistic expectations and practical solutions for their problems."
+    "title": "अंतर्राष्ट्रीय आर्थोपेडिक क्लिनिक",
+    "description": "भारत में स्थानीय और प्रवासी समुदाय को और अंतरराष्ट्रीय समुदाय को आर्थोपेडिक सर्जरी में विशेषज्ञता प्रदान करने के लिए दर्शन मेमोरियल की स्थापना की गई थी। लुधियाना, कुरुक्षेत्र और मुक्तसर में प्रशिक्षण और काम करने के अपने अनुभवों से, डॉ। ईशान का मानना है कि मरीजों के लिए संचार और सहानुभूति महत्वपूर्ण है, कोई फर्क नहीं पड़ता। डॉ। ईशान को रोगी की जरूरतों को समझने, उनकी उम्मीदों के लिए यथार्थवादी उम्मीदों और व्यावहारिक समाधान प्रदान करने में आनंद मिलता है।"
   },
   "diseases": {
-    "header": "Conditions",
-    "description": "The doctors of the hospital specializes in areas related to bones, testing, Covid support, Plastic Surgery, Baby delivery, Sports Injuries and Tissue Reconstruction. They performs Robotic Surgery, and manages General Adult and Paediatric Trauma, and Musculoskeletal Tumours.",
-    "sportsInjury": "Sports Injury",
-    "jointPain": "Joint Pain",
-    "fracture": "Fracture",
-    "osteoporosis": "Osteoporosis",
-    "hipKnee": "Hip & Knee Replacement",
-    "disorders": "Muscoskeletal Disorder",
-    "diabetes": "Diabetes",
-    "delivery": "Baby Delivery",
-    "spineInjury": "Spine Injury",
-    "learnMore": "Learn More"
+    "header": "ਸਮੱਸਿਆਵਾਂ",
+    "description": "अस्पताल के डॉक्टर हड्डियों, ओब-गाइन सेवाओं, कोविद सहायता, प्लास्टिक सर्जरी, बेबी डिलीवरी, खेल चोटों और ऊतक पुनर्निर्माण से संबंधित क्षेत्रों में माहिर हैं। वे रोबोटिक सर्जरी करते हैं, और सामान्य वयस्क और बाल चिकित्सा आघात, और मस्कुलोस्केलेटल ट्यूमर का प्रबंधन करते हैं।",
+    "sportsInjury": "खेल की चोट",
+    "jointPain": "जोड़ों का दर्द",
+    "fracture": "टूटी हड्डी",
+    "osteoporosis": "हड्डी गल जाना",
+    "hipKnee": "हिप और घुटने रिप्लेसमेंट",
+    "disorders": "मस्कुलोस्केलेटल विकार",
+    "diabetes": "मधुमेह",
+    "delivery": "बच्चे का प्रसव",
+    "spineInjury": "रीढ़ की हड्डी में चोट",
+    "learnMore": "और अधिक जानें"
   },
   "injuries": {
-    "bones": "Bones",
-    "jointPain": "Joint Pain",
-    "sportsInjury": "Sports Injury",
-    "shoulderLimb": "Shoulder And Upper Limb"
+    "bones": "हड्डिय",
+    "jointPain": "जोड़ों का दर्द",
+    "sportsInjury": "खेल की चोट",
+    "shoulderLimb": "कंधे और अंग"
   },
   "doctor1": {
-    "designation": "Chief Orthopaedic",
-    "years": "5 + years",
-    "description": "Dr. Ishaan is one of the most prominent doctor in the region. He has 5 years of experience in dealing with C-Section deliveries, trauma(fracture) and joint ache related issue.He expertise has helped many get relieved from their ailments and ortho related pains.",
+    "designation": "मुख्य हड्डी रोग विशेषज्ञ",
+    "years": "5+ साल",
+    "description": "डॉ। ईशान इस क्षेत्र के सबसे प्रमुख चिकित्सक में से एक हैं। सी-सेक्शन डिलीवरी, ट्रॉमा (फ्रैक्चर) और जोड़ों के दर्द से संबंधित समस्या से निपटने के लिए उनके पास 5 साल का अनुभव है। उनकी विशेषज्ञता ने कई बीमारियों और ऑर्थो से संबंधित दर्द से छुटकारा पाने में मदद की है।",
     "learnMore": "Learn More"
   },
   "doctor2": {
-    "designation": "Chief Surgeon",
-    "years": "5 + years",
-    "description": "Dr. Natalie is one of the most prominent doctor in the region. He has 5 years of experience in dealing with C-Section deliveries, trauma(fracture) and joint ache related issue.He expertise has helped many get relieved from their ailments and ortho related pains.",
+    "designation": "मुख्य सर्जन",
+    "years": "5+ साल",
+    "description": "डॉ। नताली इस क्षेत्र के सबसे प्रमुख चिकित्सक में से एक हैं। सी-सेक्शन डिलीवरी, ट्रॉमा (फ्रैक्चर) और जोड़ों के दर्द से संबंधित समस्या से निपटने के लिए उनके पास 5 साल का अनुभव है। उनकी विशेषज्ञता ने कई बीमारियों और ऑर्थो से संबंधित दर्द से राहत पाने में मदद की है।",
     "learnMore": "Learn More"
   },
   "bookAppointment": {
-    "bookAppointment?": "Do you want to visit our Hospital? Book a free appointment?",
-    "bookAppointment": "Book Appointment"
+    "bookAppointment?": "क्या आप हमारे अस्पताल जाना चाहते हैं? एक नि: शुल्क अपॉइंटमेंट बुक करें?",
+    "bookAppointment": "निर्धारित अपॉइंटमेंट बुक करो"
   },
   "testimonials": {
     "testimonial1": {
-      "feedback": "I got the best treatment ever. Highly recommend. Dr. Shayam treated my long lasting back pain.",
-      "name": "Shyam Singh",
-      "occupation": "Shopkeeper"
+      "feedback": "मुझे अब तक का सबसे अच्छा इलाज मिला। बहुत अधिक प्रशंसा की जाती है। डॉ। ईशान ने मेरे लंबे समय तक चले दर्द का इलाज किया|",
+      "name": "श्याम सिंह",
+      "occupation": "दुकानदार"
     },
     "testimonial2": {
-      "feedback": "Dr. Natalie treaded my wife. Infact I will name my new born daughters Natalie Prasad.",
-      "name": "Hari Prasad",
-      "occupation": "Businessman"
-    },
-    "footer": {
-      "addressInfo": "Address Info",
-      "location": "Opposite Govt. Girls Secondary School Bathinda Road, Sri Muktsar Sahib.",
-      "operatingHours": "Operating Hours",
-      "mondayTimings": "Monday to Friday - 9.00 AM – 5.00 PM",
-      "saturdayTimings": "Saturday - 9.00 AM – 1.00 PM",
-      "sundayMessage": "Closed on Sundays and Public Holidays",
-      "connectWithUs": "Connect With Us",
-      "copyright": "Copyright © 2020 - 2021  All Rights Reserved."
+      "feedback": "डॉ। नताली ने मेरी पत्नी का इलाज किया। वास्तव में मैं अपनी नई बेटियों का नाम नताली प्रसाद रखूंगा।",
+      "name": "हरि प्रसाद",
+      "occupation": "स्थानीय व्यापारी"
     }
+  },
+  "footer": {
+    "addressInfo": "पता जानकारी",
+    "location": "विपरीत सरकार। गर्ल्स सेकेंडरी स्कूल बठिंडा रोड, श्री मुक्तसर साहिब।",
+    "operatingHours": "संचालन घंटे",
+    "mondayTimings": "सोमवार से शुक्रवार - 9.00 AM – 5.00 PM",
+    "saturdayTimings": "शनिवार - 9.00 AM – 1.00 PM",
+    "sundayMessage": "रविवार और सार्वजनिक छुट्टियों पर बंद रहता है",
+    "connectWithUs": "सोशल मीडिया पर हमसे जुड़े रहें",
+    "copyright": "Copyright © 2020 - 2021  All Rights Reserved."
+  },
+  "orthopedist": {
+    "name": "डॉ. ईशान भटेजा",
+    "description": "डॉ। ईशान एक प्रसिद्ध हड्डियों के डॉक्टर हैं जो मुक्तसर समुदाय के हैं। उन्होंने अपना M.B.B.S फिरोजपुर से और M.D लुधियाना से किया। एक युवा बंदूक होने के नाते, डॉ। ईशान उन्नत सर्जरी तकनीकों से अच्छी तरह वाकिफ हैं"
+  },
+  "obstetrician": {
+    "name": "डॉ. नताली भटेजा",
+    "description": "डॉ। नताली मुक्तसर समुदाय में एक प्रसिद्ध प्रसूति विशेषज्ञ हैं। उसने फिरोजपुर से M.B.B.S और लुधियाना से M.D. किया। वह युवती की अत्यंत देखभाल करता है।"
+  },
+  "gallery": {
+    "header": "अस्पताल में एक सामान्य दिन की झलक",
+    "description": "हम दर्शन स्मारक में विश्व स्तरीय उपचार के साथ-साथ कई प्रकार की सेवाएं प्रदान करते हैं। यहाँ कुछ चित्र हैं जो दिखाते हैं कि हम अपने मरीजों की कितनी देखभाल करते हैं",
+    "nurses": {
+      "title": "नर्सें",
+      "description": "डॉक्टर अपनी निर्धारित सर्जरी के लिए आने से पहले चीजों को तैयार करने के लिए काम कर रहे हैं।"
+    },
+    "icu": {
+      "title": "आई. सी. यू",
+      "description": "वेंटिलेशन और एयर कंडीशनिंग सहित डीलक्स सेवाओं के साथ गहन देखभाल कक्ष।"
+    },
+    "waitingHall": {
+      "title": "ਇੰਤਜ਼ਾਰ ਹਾਲ",
+      "description": "परिवार और रिश्तेदारों के लिए प्रतीक्षा क्षेत्र। इकोफ्रेंडली क्षेत्र।"
+    },
+    "parking": {
+      "title": "पार्किंग",
+      "description": "एम्बुलेंस सेवाओं के साथ निजी पार्किंग।"
+    },
+    "physiotherapy": {
+      "title": "फिजियोथेरेपी",
+      "description": "तेजी से वसूली के लिए अनुकूलित फिजियोथेरेपी सत्र।"
+    },
+    "commonRoom": {
+      "title": "सामूहिक कमरा",
+      "description": "एक आम रोगी वसूली कक्ष जो हर बजट में फिट बैठता है।"
+    }
+  },
+  "bodyPart": {
+    "shoulder": "Shoulder and Upper Limb",
+    "knee": "Knee",
+    "trauma": "Trauma",
+    "hip": "Hip",
+    "ankle": "Ankle"
+  },
+  "shoulder": {
+    "clavicle": "Clavicle (collarbone) fractures",
+    "humerus": "Humerus (upper armbone) fractures",
+    "instability": "Shoulder instability",
+    "carpal": "Carpal tunnel syndrome",
+    "ulnar": "Ulnar nerve impingement",
+    "tennis": "Tennis Elbow",
+    "trigger": "Trigger Finger",
+    "tendinopathies": "Tendinopathies of the wrist and elbow"
+  },
+  "knee": {
+    "partialKnee": "Total and Partial Knee Replacement",
+    "roboticSurgery": "Robotic Surgery",
+    "ligament": "Ligament Surgery",
+    "meniscal": "Meniscal Injury",
+    "cartilage": "Cartilage Injury",
+    "patella": "Patella Elbow",
+    "tendinopathies": "Tendinopathies and fractures"
+  },
+  "trauma": {
+    "limb": "Upper And Lower Limb Fracture",
+    "hand": "Hand Fractures",
+    "footAndAnkles": "Foot And Ankles Fractures",
+    "meniscal": "Pelvic and Acetabular Reconstruction",
+    "cartilage": "Revision Surgery",
+    "patella": "Fracture Non-Union"
+  },
+  "hip": {
+    "bursitis": "Hip Bursitis",
+    "stressFracture": "Hip stress fracture",
+    "hipFracture": "Hip Fracture",
+    "avascular": "Avascular necrosis",
+    "osteoarthritis": "Hip osteoarthritis",
+    "hipReplacement": "Total Hip replacement",
+    "revisionSurgery": "Revision Hip Surgery",
+    "roboticSurgery": "Robotic surgery"
+  },
+  "ankle": {
+    "arthroscopy": "Ankle arthroscopy",
+    "cartilage": "Ankle cartilage defects",
+    "instability": "Ankle instability",
+    "deformity": "Correction of foot deformity – hallux valgus (bunion)"
+  },
+  "facilities": {
+    "facility1": {
+      "name": "Physiotherapy",
+      "description": "We provide world class Physiotherapy with. We derive immense pride and reputation owing to the fact that we provide the humanistic and cost effective healthcare to our patients."
+    },
+    "facility2": {
+      "name": "X-Ray",
+      "description": "We have a latest highly capable X-Ray machine that shows skeleton system in high resolution."
+    },
+    "facility3": {
+      "name": "Ventilator",
+      "description": "We also have ventilator to provide care for high risk patients."
+    },
+    "learnMore": "Learn More"
+  },
+  "laboratory": {
+    "header": "Laboratory",
+    "description": "Right Diagnosis and early recognition of the disease helps not on in Curing the disease before it causes damage but also helps in preventing underlying condition whose symptoms are yet to be visible. Our Laboratory provides wide array of testing services."
+  },
+  "delivery": {
+    "header": "OB-GYN Doctor",
+    "description": "Keeping in view that women in general prefer to be treated by an obstetrician-gynecologist (OB-GYN). We provide all the necessary services that include delivery, Cesarean surgery and child care services."
+  },
+  "surgery": {
+    "header": "Surgery",
+    "description": " All types of surgeries are done here."
+  },
+  "bookAppointmentPage": {
+    "enterDetails": "Please Enter your Details",
+    "name": "Name",
+    "namePlaceholder": "Enter your Name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your Email ",
+    "date": "Date",
+    "datePlaceholder": "Select Date",
+    "time": "Time",
+    "timePlaceholder": "Select Time",
+    "bookIt": "Book It!",
+    "confirm": "Confirm appointment on {{selectedDate}} at {{selectedTime}}"
+  },
+  "contactUs": {
+    "name": "Name",
+    "namePlaceholder": "Enter your Name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your Email ",
+    "query": "Query",
+    "queryPlaceholder": "Write your Query",
+    "sendMessage": "Send Message!"
   }
 }

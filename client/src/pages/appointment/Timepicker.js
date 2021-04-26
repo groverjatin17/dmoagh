@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import DatePicker from 'react-datepicker';
 import setMinutes from 'date-fns/setMinutes';
 import setHours from 'date-fns/setHours';
 import 'react-datepicker/dist/react-datepicker.css';
 
 export default function CustomTimePicker({ callback }) {
-  const [startDate, setStartDate] = useState(null);
+  const { t } = useTranslation();
+  const [startTime, setStartTime] = useState(null);
 
   const handleColor = (time) => {
     return time.getHours() > 12 && time.getHours() < 14
@@ -17,13 +19,13 @@ export default function CustomTimePicker({ callback }) {
     <DatePicker
       showTimeSelect
       showTimeSelectOnly
-      selected={startDate}
+      selected={startTime}
       onChange={(date) => {
-        setStartDate(date);
+        setStartTime(date);
         callback(date.toLocaleTimeString());
       }}
       timeClassName={handleColor}
-      placeholderText="Select Time"
+      placeholderText={t('bookAppointmentPage.timePlaceholder')}
       minTime={setHours(setMinutes(new Date(), 0), 8)}
       maxTime={setHours(setMinutes(new Date(), 0), 20)}
       dateFormat="h:mm aa"

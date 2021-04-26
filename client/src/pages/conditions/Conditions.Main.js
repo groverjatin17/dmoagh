@@ -11,12 +11,5 @@ export default function Conditions() {
   ConditionList.forEach((item) => {
     conditionsObject[item.listId] = [...item.listItems];
   });
-  if (isMobile) {
-    console.log('This is a mobile');
-  } else {
-    console.log('This is not a mobile');
-  }
-  console.log("🚀 ~ file: Conditions.Main.js ~ line 11 ~ ConditionList.forEach ~ conditionsObject", conditionsObject)
-
   return !isMobile ? conditionsXL(conditionsObject, t) : conditionsXS(conditionsObject, t);
 }

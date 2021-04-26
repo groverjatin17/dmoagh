@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import DatePicker from 'react-datepicker';
 import subDays from 'date-fns/subDays';
 import setMinutes from 'date-fns/setMinutes';
@@ -6,6 +7,7 @@ import setHours from 'date-fns/setHours';
 import 'react-datepicker/dist/react-datepicker.css';
 
 export default function CustomDatePicker({ callback }) {
+  const { t } = useTranslation();
   const [startDate, setStartDate] = useState(null);
 
   const handleColor = (time) => {
@@ -22,7 +24,6 @@ export default function CustomDatePicker({ callback }) {
     );
     return listOfExcludedDates;
   };
-
   return (
     <DatePicker
       // showTimeSelect
@@ -32,7 +33,7 @@ export default function CustomDatePicker({ callback }) {
         callback(date);
       }}
       timeClassName={handleColor}
-      placeholderText="Select Date"
+      placeholderText={t('bookAppointmentPage.datePlaceholder')}
       minTime={setHours(setMinutes(new Date(), 0), 8)}
       maxTime={setHours(setMinutes(new Date(), 0), 20)}
       excludeDates={excludeDates(30)}
