@@ -6,8 +6,13 @@ export function menuItems() {
           subItems: [
             {
               subItemId: 0,
-              subItemTitle: 'navBar.subMenu.profileOfDoctor',
-              subItemLink: '/doctor',
+              subItemTitle: 'navBar.subMenu.orthopedist',
+              subItemLink: '/orthopedist',
+            },
+            {
+              subItemId: 0,
+              subItemTitle: 'navBar.subMenu.obstetrician',
+              subItemLink: '/obstetrician',
             },
             {
               subItemId: 2,

@@ -29,7 +29,8 @@ const App = () => {
         <Surgery path="/surgery" />
         <Conditions path="/conditions" />
         <OurGallery path="/gallery" />
-        <Doctor path="/doctor" />
+        <Doctor path="/orthopedist" />
+        <Doctor path="/obstetrician" />
       </Router>
       <Footer />
     </>

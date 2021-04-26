@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-
+import {useTranslation} from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 export default function MobileMenuBar({ handleMobileMenuClose }) {
   const classes = useStyles();
   const [expandedPanel, setPanelState] = useState(null);
-
+  const {t} = useTranslation();
   const menu = useSelector((state) => state.homepageReducers.menu);
 
   const handleClick = (panelId) => {
@@ -50,7 +50,7 @@ export default function MobileMenuBar({ handleMobileMenuClose }) {
                   button
                   onClick={() => handleClick(menuItem.menuItemId)}
                 >
-                  <ListItemText primary={menuItem.menuItemTitle} />
+                  <ListItemText primary={t(menuItem.menuItemTitle)} />
                   {expandedPanel === menuItem.menuItemId ? (
                     <ExpandLess />
                   ) : (
@@ -70,7 +70,7 @@ export default function MobileMenuBar({ handleMobileMenuClose }) {
                         onClick={handleMobileMenuClose}
                       >
                         <ListItem button className={classes.nested}>
-                          <ListItemText primary={subItem.subItemTitle} />
+                          <ListItemText primary={t(subItem.subItemTitle)} />
                         </ListItem>
                       </Link>
                     ))}
@@ -86,7 +86,7 @@ export default function MobileMenuBar({ handleMobileMenuClose }) {
               onClick={handleMobileMenuClose}
             >
               <ListItem button>
-                <ListItemText primary={menuItem.menuItemTitle} />
+                <ListItemText primary={t(menuItem.menuItemTitle)} />
               </ListItem>
             </Link>
           );
