@@ -13,7 +13,6 @@ import Footer from './components/footer/Footer';
 import Delivery from './pages/facilities/Delivery.Main';
 import Laboratory from './pages/facilities/Laboratory.Main';
 import Doctor from './pages/gallery/Doctor.Main';
-import './tailwind/tailwind.css';
 
 const App = () => {
   return (

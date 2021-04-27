@@ -7,7 +7,6 @@ import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import './i18n';
-import './tailwind/tailwind.css';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
