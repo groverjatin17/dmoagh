@@ -59,7 +59,7 @@ export default function AppointmentForm() {
                 //TODO: call api
                 toast.promise(
                   axios
-                    .post('http://localhost:8080/api/sendMail', {
+                    .post('https://dmoagh.herokuapp.com/api/sendMail', {
                       name,
                       email,
                       message: dateString,
