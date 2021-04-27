@@ -67,7 +67,7 @@ export default function Introduction() {
           </p>
           <div className="flex items-center">
             <a href="#blah" className="text-lg font-bold py-6 pl-6 lg:p-0">
-              READ MORE
+              {t('introduction.readMore')}
             </a>
             <svg
               fill="none"

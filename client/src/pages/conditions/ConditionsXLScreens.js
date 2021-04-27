@@ -69,7 +69,7 @@ const conditionsXL = (conditionsObject, t) => {
             </div>
             <div className="row-span-1 mb-6  ml-48">
               <h1 className="font-serif text-4xl text-black mb-6 w-64">
-              {t(` bodyPart.ankle`)}
+              {t(`bodyPart.ankle`)}
               </h1>
               <ul className="list-disc list-inside ">
                 {conditionsObject &&

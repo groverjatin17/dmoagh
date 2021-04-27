@@ -22,7 +22,7 @@ export default function LogoBar() {
         <div className="flex flex-col justify-center ml-16 col-span-2">
           <div className="flex border-b-2">
             <img src={PhoneLogo} alt="phone-icon" className="h-10 " />
-            <p className="text-blue-900 text-xl">9872480059 </p>
+            <p className="text-blue-900 text-xl">7888317905 </p>
           </div>
           <span className="text-gray-600 text-center">
             {t('speakWithUsToday')}
@@ -51,7 +51,7 @@ export default function LogoBar() {
       <div className="lg:flex hidden flex-col justify-center pr-10">
         <div className="flex border-b-2">
           <img src={PhoneLogo} alt="phone-icon" className="h-10 " />
-          <p className="text-blue-900 text-xl">9872480059 </p>
+          <p className="text-blue-900 text-xl">7888317905</p>
         </div>
         <span className="text-gray-600 text-center">
           {t('speakWithUsToday')}

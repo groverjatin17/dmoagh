@@ -149,7 +149,7 @@ export default function AppointmentForm() {
               type="submit"
               disabled={submitting}
             >
-              Book It!
+          {t('bookAppointmentPage.bookIt')}
             </button>
           </div>
         </form>

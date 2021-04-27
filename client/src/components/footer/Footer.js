@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import PhoneLogo from '../../assets/icons/call-icon-footer.svg';
 import MapMarker from '../../assets/icons/map-marker.svg';
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <div>
       <footer>
@@ -12,7 +14,7 @@ export default function Footer() {
               <div className="px-4 my-4 w-full sm:w-auto">
                 <div>
                   <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
-                    Address Info
+                    {t('footer.addressInfo')}
                   </h2>
                 </div>
                 <ul className="leading-8">
@@ -23,9 +25,9 @@ export default function Footer() {
                       alt="map-marker"
                       className="h-6 inline"
                     />
-                    Opposite Govt. Girls Secondary School
+                    {t('footer.location')}
                   </li>
-                  <li className="pl-6">Bathinda Road, Sri Muktsar Sahib.</li>
+                  <li className="pl-6"> {t('footer.location2')}</li>
                   <li>
                     <img
                       src={PhoneLogo}
@@ -39,19 +41,19 @@ export default function Footer() {
               <div className="px-4 my-4 w-full sm:w-auto">
                 <div>
                   <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
-                    Operating Hours
+                    {t('footer.operatingHours')}
                   </h2>
                 </div>
                 <ul className="leading-8">
-                  <li>Monday to Friday - 9.00 AM – 5.00 PM</li>
-                  <li>Saturday - 9.00 AM – 1.00 PM</li>{' '}
-                  <li>Closed on Sundays and Public Holidays</li>
+                  <li> {t('footer.mondayTimings')}</li>
+                  <li> {t('footer.saturdayTimings')}</li>{' '}
+                  <li> {t('footer.sundayMessage')}</li>
                 </ul>
               </div>
               <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
                 <div>
                   <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
-                    Connect With Us
+                    {t('footer.connectWithUs')}
                   </h2>
                 </div>
                 <a
@@ -121,7 +123,8 @@ export default function Footer() {
         <div className="bg-indigo-700 py-4 text-gray-100 flex justify-center items-center">
           <span className="inline">
             Copyright &copy; 2020
-            {new Date().getFullYear() > 2020 && ` - ${new Date().getFullYear()}`}
+            {new Date().getFullYear() > 2020 &&
+              ` - ${new Date().getFullYear()}`}
             &nbsp; All Rights Reserved.
           </span>
         </div>

@@ -30,7 +30,8 @@
   },
   "introduction": {
     "title": "International Orthopaedic Clinic",
-    "description": "Darshan Memorial  was established to provide expertise in Orthopaedic surgery to the local and expatriate community in India and to the international community. From his experiences training and working in Ludhiana, Kuruksheta and Muktsar, Dr Ishan believes that communication and empathy is vital for patients no matter the background. Dr Ishan enjoys understanding the patient’s needs, providing realistic expectations and practical solutions for their problems."
+    "description": "Darshan Memorial  was established to provide expertise in Orthopaedic surgery to the local and expatriate community in India and to the international community. From his experiences training and working in Ludhiana, Kuruksheta and Muktsar, Dr Ishan believes that communication and empathy is vital for patients no matter the background. Dr Ishan enjoys understanding the patient’s needs, providing realistic expectations and practical solutions for their problems.",
+    "readMore": "Read More"
   },
   "diseases": {
     "header": "Conditions",
@@ -53,12 +54,14 @@
     "shoulderLimb": "Shoulder And Upper Limb"
   },
   "doctor1": {
+    "name":"Dr. Ishan Bhateja",
     "designation": "Chief Orthopaedic",
     "years": "5 + years",
     "description": "Dr. Ishaan is one of the most prominent doctor in the region. He has 5 years of experience in dealing with C-Section deliveries, trauma(fracture) and joint ache related issue.He expertise has helped many get relieved from their ailments and ortho related pains.",
     "learnMore": "Learn More"
   },
   "doctor2": {
+    "name": "Dr. Natalie Bhateja",
     "designation": "Chief Surgeon",
     "years": "5 + years",
     "description": "Dr. Natalie is one of the most prominent doctor in the region. He has 5 years of experience in dealing with C-Section deliveries, trauma(fracture) and joint ache related issue.He expertise has helped many get relieved from their ailments and ortho related pains.",
@@ -82,7 +85,8 @@
   },
   "footer": {
     "addressInfo": "Address Info",
-    "location": "Opposite Govt. Girls Secondary School Bathinda Road, Sri Muktsar Sahib.",
+    "location": "Opposite Govt. Girls Secondary School",
+    "location2": "Bathinda Road, Sri Muktsar Sahib.",
     "operatingHours": "Operating Hours",
     "mondayTimings": "Monday to Friday - 9.00 AM – 5.00 PM",
     "saturdayTimings": "Saturday - 9.00 AM – 1.00 PM",
@@ -111,7 +115,7 @@
     },
     "waitingHall": {
       "title": "Waiting Hall",
-      "description": "Waiting area for family and relatives. Ecofriendly area."
+      "description": "Waiting area for family and relatives. Ecofriendly area with Air Conditioning."
     },
     "parking": {
       "title": "Parking",
@@ -174,7 +178,7 @@
     "arthroscopy": "Ankle arthroscopy",
     "cartilage": "Ankle cartilage defects",
     "instability": "Ankle instability",
-    "deformity": "Correction of foot deformity – hallux valgus (bunion)"
+    "deformity": "Correction of foot deformity"
   },
   "facilities": {
     "facility1": {

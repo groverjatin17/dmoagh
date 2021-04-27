@@ -1,6 +1,4 @@
 import React from 'react';
-import { Trans, useTranslation } from 'react-i18next';
-
 import Hero from './Hero';
 import Introduction from './Introduction';
 import DiseasesSection from './DiseasesSection';
@@ -9,7 +7,6 @@ import AppointmentMessage from './AppointmentMessage';
 import Testimonials from './Testimonials'
 
 export default function Homepage() {
-  const { t } = useTranslation();
 
   return (
     <div>

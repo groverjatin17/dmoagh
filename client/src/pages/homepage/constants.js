@@ -5,39 +5,36 @@ import Doctor2 from '../../assets/images/doctor2.jpg';
 
 export const Testimonials = [
     {
-        name: "Shyam Singh",
-        description: `I got the best treatment ever. Highly recommend. 
-        Dr. Shayam treated my long lasting back pain.`,
+        name: 'testimonials.testimonial1.name',
+        description: 'testimonials.testimonial1.feedback',
         image: Testimonial1,
-        position: "Shopkeeper"
+        position: 'testimonials.testimonial1.occupation',
     },
     {
-        name: "Hari Prasad",
-        description: "Dr. Natalie treaded my wife. Infact I will name my new born daughteras Natalie Prasad.",
-        image: Testimonial2,
-        position: "Businessman"
+      name: 'testimonials.testimonial2.name',
+      description: 'testimonials.testimonial2.feedback',
+      image: Testimonial2,
+      position: 'testimonials.testimonial2.occupation',
     },
 ]
 
 export const doctorsList = [
     {
       doctorId: 0,
-      name: 'Dr. Ishan Bhateja',
+      name: 'doctor1.name',
       qualification: 'M.B.B.S, M.S(General Surgery)',
-      position: 'Chief Orthopaedic',
-      experience: '5',
+      position: 'doctor1.designation',
+      experience: 'doctor1.years',
       imageURL: Doctor1,
-      description:
-        'Dr. Ishaan is one of the most prominent doctor in the region. He has 5 years of experience in dealing with C-Section deliveries, trauma(fracture) and joint ache related issue.He expertise has helped many get relieved from their ailments and ortho related pains.',
+      description: 'doctor1.description'
     },
     {
       doctorId: 1,
-      name: 'Dr. Natalie Bhateja',
+      name: 'doctor2.name',
       qualification: 'M.B.B.S',
-      position: 'Chief Orthopaedic',
-      experience: '5',
+      position: 'doctor2.designation',
+      experience: 'doctor2.years',
       imageURL: Doctor2,
-      description:
-        'Dr. Natalie is one of the most prominent doctor in the region. He has 5 years of experience in dealing with C-Section deliveries, trauma(fracture) and joint ache related issue.He expertise has helped many get relieved from their ailments and ortho related pains.',
+      description: 'doctor2.description'
     },
   ];

@@ -15,7 +15,8 @@ module.exports = {
         '550px': '550px'
       },
       padding: {
-        '9.7rem': '9.7rem'
+        '9.7rem': '9.7rem',
+        '8.7rem': '8.7rem'
       },
       textColor: {
         '#b2d7ff': '#b2d7ff'

@@ -9,7 +9,7 @@ export default function Surgery() {
       <section className="text-gray-700 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap flex-col">
           <img
-            className="xl:w-80% lg:w-1/3 md:w-1/2 w-90% block mx-auto mb-10 object-cover object-center rounded-2xl lg:h-550px"
+            className="xl:w-80% w-90% block mx-auto mb-10 object-cover object-center rounded-2xl lg:h-550px"
             alt="surgery"
             src={SurgeryImage}
           />

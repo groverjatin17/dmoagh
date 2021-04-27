@@ -1,6 +1,7 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Avatar, makeStyles } from '@material-ui/core';
-import {doctorsList} from './constants';
+import { doctorsList } from './constants';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DoctorsInfoSection() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -35,27 +37,27 @@ export default function DoctorsInfoSection() {
                   </div>
                   <div className="flex flex-col items-center text-center justify-center">
                     <h2 className="font-medium title-font mt-4 text-gray-900 text-2xl">
-                      {doctor.name}
+                      {t(doctor.name)}
                     </h2>
                     <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4" />
                     <div className="text-xl capitalize font-openSans text-blue-900">
-                      {doctor.position}
+                      {t(doctor.position)}
                     </div>
                     <div className="text-base uppercase font-openSans text-gray-500 ">
-                      {doctor.qualification}
+                      {t(doctor.qualification)}
                     </div>
                     <p className="text-base text-gray-600">5+ Years</p>
                   </div>
                 </div>
                 <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                   <p className="leading-relaxed text-lg mb-4">
-                    {doctor.description}
+                    {t(doctor.description)}
                   </p>
                   <a
                     className="text-indigo-500 inline-flex items-center"
                     href="#bleh"
                   >
-                    Learn More
+                    {t('doctor1.learnMore')}
                     <svg
                       fill="none"
                       stroke="currentColor"

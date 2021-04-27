@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 import Spine from '../../assets/images/spine-back.jpg';
 import Disease1 from '../../assets/images/disease01.jpg';
 import Disease2 from '../../assets/images/disease02.jpg';
@@ -51,7 +51,7 @@ const diseasesData = [
   },
 ];
 export default function DiseasesSection() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <div>
       <div className="lg:grid lg:grid-cols-2 ">
@@ -59,8 +59,10 @@ export default function DiseasesSection() {
           className="lg:col-span-1 bg-no-repeat relative"
           style={{ backgroundImage: `url(${Spine}` }}
         >
-          <div className="mx-10 py-10 lg:py-20 lg:pl-24 lg:pr-10 lg:mr-5">
-            <h1 className="text-4xl text-white font-serif mb-6">{t(`diseases.header`)}</h1>
+          <div className="mx-10 mt-10 lg:pl-24 lg:pr-10 lg:mr-5">
+            <h1 className="text-4xl text-white font-serif mb-3">
+              {t(`diseases.header`)}
+            </h1>
             <p className="text-#b2d7ff text-base font-openSans leading-loose mb-6">
               {t(`diseases.description`)}
             </p>
@@ -96,39 +98,45 @@ export default function DiseasesSection() {
             </div>
             <button
               type="button"
-              className="border-solid border-2 rounded-3xl py-2 px-10 text-white text-lg border-blue-700 focus:outline-none transform hover:scale-95"
+              className="border-solid border-2 rounded-3xl py-2 px-10 text-white text-lg border-blue-700 focus:outline-none transform hover:scale-95 mb-3"
             >
-              Learn More
+              {t('diseases.learnMore')}
             </button>
           </div>
         </div>
         <div className="lg:col-span-1">
           <div className="lg:grid grid-flow-col grid-cols-2 grid-rows-2">
             <div
-              className=" p-9.7rem bg-cover bg-no-repeat relative"
+              className=" p-8.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease1}` }}
             >
-              <p className="absolute bottom-20px right-20px  text-white w-24">
-                Shoulder and Upper Limb
+              <p className="absolute bottom-20px right-20px text-white w-24">
+              {t('injuries.shoulderLimb')}
               </p>
             </div>
             <div
-              className=" p-9.7rem bg-cover bg-no-repeat relative"
+              className=" p-8.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease2}` }}
             >
-              <p className="absolute bottom-20px right-20px  text-white">Bones</p>
+              <p className="absolute bottom-20px right-20px text-white  w-24">
+              {t('injuries.bones')}
+              </p>
             </div>
             <div
-              className=" p-9.7rem bg-cover bg-no-repeat relative"
+              className=" p-8.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease3}` }}
             >
-              <p className="absolute bottom-20px right-20px text-white w-24">Sports Injury</p>
+              <p className="absolute bottom-20px right-20px text-white w-24">
+              {t('injuries.sportsInjury')}
+              </p>
             </div>
             <div
-              className=" p-9.7rem bg-cover bg-no-repeat relative"
+              className=" p-8.7rem bg-cover bg-no-repeat relative"
               style={{ backgroundImage: `url(${Disease4}` }}
             >
-              <p className="absolute bottom-20px right-20px  text-white w-24">Joint Pain</p>
+              <p className="absolute bottom-20px right-20px text-white w-24">
+              {t('injuries.jointPain')}
+              </p>
             </div>
           </div>
         </div>
