@@ -5,7 +5,7 @@ import Logo from '../../assets/icons/hospital-logo.svg';
 import HospitalName from '../../assets/icons/hospital-name.svg';
 import HospitalNamesm from '../../assets/icons/hospital-name-mobile.svg';
 import PhoneLogo from '../../assets/icons/call-icon.svg';
-import './tailwind/tailwind.css';
+import '../../tailwind/tailwind.css'
 
 export default function LogoBar() {
   const { t } = useTranslation();
