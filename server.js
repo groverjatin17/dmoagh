@@ -78,19 +78,36 @@ app.post('/api/sendMail', (req, res) => {
     const { name, email, message } = req.body;
 
     const mailOptions = {
-        from: name,
+        from: "darshanmemorial@gmail.com",
         to: 'darshanmemorial@gmail.com',
         subject: `Visitor's mail in portfolio`,
         text: `${name} with email address ${email} says: ${message}`,
     };
 
-    transporter.sendMail(mailOptions, function (err, data) {
+    const mailOptions2 = {
+        from: name,
+        to: 'groverjatin17@gmail.com',
+        subject: `Visitor's mail in portfolio`,
+        text: `${name} with email address ${email} says: ${message}`,
+    };
+
+    // transporter.sendMail(mailOptions, function (err, data) {
+    //     if (err) {
+    //         console.log(`Failed to send mail from ${name}❌`);
+    //         res.send(`We are facing this Error: ${err} ❌`);
+    //     } else {
+    //         console.log('LOG: Mail sent Successfully 🚀');
+    //         res.send('Mail sent successfully. Check Inbox!!');
+    //     }
+    // });
+
+    transporter.sendMail(mailOptions2, function (err, data) {
         if (err) {
-            console.log(`Failed to send mail from ${name}❌`);
+            console.log(`Email 2 error ${name}❌`);
             res.send(`We are facing this Error: ${err} ❌`);
         } else {
-            console.log('LOG: Mail sent Successfully 🚀');
-            res.send('Mail sent successfully. Check Inbox!!');
+            console.log('LOG: Mail sent Successfully to user 🚀');
+            res.send('Mail sent  via 2nd transporter!!');
         }
     });
 });
